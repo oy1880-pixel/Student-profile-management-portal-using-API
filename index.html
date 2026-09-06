@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Profile Management Portal - Shivtej Yadav</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div><h1>STUDENT PROFILE MANAGEMENT PORTAL USING API</h1><p>Yashwantrao Chavan Mahavidyalaya, Islampur | 2026-27 | B.Sc-III CS</p></div>
+</header>
+
+<div class="student-info">
+<div><b>Student:</b> Yadav Shivtej Rahul</div><div><b>Project:</b> Student Profile Portal</div><div>● API Connected - REST / JSON</div>
+</div>
+
+<div class="dashboard">
+<div class="stat-card"><h3 id="totalStudents">0</h3><p>Total Students</p></div>
+<div class="stat-card"><h3 id="activeStudents">0</h3><p>Active Profiles</p></div>
+<div class="stat-card"><h3>API</h3><p>REST + JSON</p></div>
+<div class="stat-card"><h3>CRUD</h3><p>Profile Management</p></div>
+</div>
+
+<div class="main">
+<div class="card">
+<div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
+<h2>Student Profiles</h2><input type="text" id="searchInput" placeholder="Search by Name / Roll No..." style="padding:10px;border-radius:8px;border:1px solid #ddd">
+</div>
+<div class="architecture" style="margin-top:15px">User → Dashboard → JS Fetch API → REST API → JSON Data → Profile Card</div>
+<div class="student-grid" id="studentGrid" style="margin-top:20px"></div>
+</div>
+
+<div class="card">
+<h3>Add / Edit Student</h3>
+<form id="studentForm" onsubmit="handleSubmit(event)">
+<input type="hidden" id="studentId">
+<input type="text" id="sName" placeholder="Full Name *" required>
+<input type="text" id="sRoll" placeholder="Roll No * Ex: 2101" required>
+<input type="text" id="sClass" placeholder="Class * Ex: B.Sc-III CS" required>
+<input type="email" id="sEmail" placeholder="Email *" required>
+<input type="text" id="sMobile" placeholder="Mobile No *" required>
+<input type="text" id="sDept" placeholder="Department * Ex: Computer Science" required>
+<select id="sYear"><option>FY</option><option>SY</option><option>TY</option><option>B.Sc-III</option></select>
+<textarea id="sSkills" placeholder="Skills * Ex: Python, Web Dev, API" required></textarea>
+<button type="submit" class="btn btn-primary" style="width:100%;margin-top:10px">Save Profile</button>
+<button type="button" class="btn" style="width:100%;margin-top:8px;background:#e2e8f0" onclick="resetForm()">Reset</button>
+</form>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+  </html>
